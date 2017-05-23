@@ -1,0 +1,45 @@
+.myButton {
+  display: block;
+  background: radial-gradient(ellipse, #4ebc28 0%, white 60%, rgba(0, 0, 0, 0.5) 80%, black 100%);
+  border: 1px solid rgba(219, 244, 219, 0.5);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.myButton::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.myButton:hover {
+  background-color: #c93030;
+}
+
+.myButton:hover .box {
+  transform: translateX(-50%);
+}
+
+.myButton .box {
+  width: 200%;
+}
+
+.myButton .box span {
+  display: block;
+  float: left;
+  color: #fff;
+  width: 50%;
+  height: 100%;
+  line-height: 200px;
+  transition: all 0.5s;
+}
+
+/*# sourceMappingURL=myButton.css.map */

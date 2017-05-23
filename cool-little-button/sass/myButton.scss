@@ -1,0 +1,47 @@
+$button-bg-color: rgba(30.5%, 73.7%, 15.5%, 1);
+$button-border-color: rgba(85.8%, 95.6%, 85.8%, 0.5);
+$button-hover-bg-color: rgba(78.8%, 19%, 19%, 1);
+$font-color: #fff;
+
+.myButton{
+    // 색깔로 뭐하려 하지말자 ..... 
+    display: block;
+    background: radial-gradient(ellipse, $button-bg-color 0%, rgba(255, 255, 255, 1) 60%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 1) 100%);
+    border: 1px solid $button-border-color;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // box-shadow: 0px 0px 20px 0 #000;
+    text-align: center;
+    transition: all 0.5s;
+    overflow: hidden;
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    &:hover{
+        background-color: $button-hover-bg-color;
+    }
+    &:hover .box{
+        transform: translateX(-50%);
+    }
+    .box{
+        width: 200%;
+         span{
+            display: block;
+            float: left;
+            color: $font-color;
+            width: 50%;
+            height: 100%;
+            line-height: 200px;
+            transition: all 0.5s;
+        }
+    }
+   
+    
+}
