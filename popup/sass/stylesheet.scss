@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Barrio');
+
+body {
+    font-size: 10px;
+}
+
+.actived-popup-btn {
+    // center
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    //button style
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #4f92c0;
+    font-size: 1.6rem;
+    font-family: "Barrio", sans-serif;
+    border: 1px solid #ddd;
+    background: linear-gradient(to bottom, #fff, #eee);
+    cursor: pointer;
+    
+    &:hover {
+        background: #fff;
+        border: 1px solid #eee;
+    }
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    transition: opacity .5s;
+    opacity: 0;
+    
+    &:target {
+        display: block;
+        opacity: 1;
+    }
+
+    &:target > .popup {
+        animation: popup-ani .5s cubic-bezier(.8, 0, 0, 1.5) forwards;
+    }
+}
+
+.popup {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -150px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    
+
+    .popup-close-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 50%;
+        display: block;
+        background: lightgreen;
+
+        .fa {
+            position: relative;
+            top: 1.5px;
+            color: #fff;
+            font-size: 1rem;
+        }
+        &:active +  {
+
+        }
+    }
+
+    h2 {
+        margin: 30px 0 15px 0;
+        text-align: center;
+        font-family: "Barrio", sans-serif;
+        color: skyblue;
+    }
+    
+    p {
+        font-family: "Barrio", sans-serif;
+        font-size: 1rem;
+        color: palevioletred;
+    }
+}
+
+@keyframes popup-ani {
+    from{
+        opacity: 0;
+        top: 0;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        top: 50%;
+        transform: scale(1.29);
+    }
+}
