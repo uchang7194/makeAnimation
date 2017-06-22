@@ -1,0 +1,121 @@
+html, body {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+.nav-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+}
+
+.nav-btn.active .btns {
+  transform: scale(0);
+}
+
+.nav-btn.active .btns.nav-btn01 {
+  top: 0px;
+}
+
+.nav-btn.active .btns.nav-btn02 {
+  top: 0px;
+}
+
+.nav-btn.active .btns.nav-btn03 {
+  top: 100px;
+  left: 0px;
+}
+
+.nav-btn.active .btns.nav-btn04 {
+  left: 0px;
+}
+
+.nav-btn.active .btns.nav-btn05 {
+  top: 0px;
+  left: 0px;
+}
+
+.nav-btn .text {
+  z-index: 999;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 200px;
+  font-size: 5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(90deg, #910EC9, #d350db, #910EC9);
+  background-size: 400% 400%;
+  animation: bg-ani 5s infinite;
+}
+
+.nav-btn .text span {
+  display: block;
+  transform: rotate(-45deg);
+}
+
+.nav-btn > div {
+  position: absolute;
+  width: 97.5px;
+  height: 97.5px;
+  background: lightcoral;
+  transition: all 0.8s ease-out;
+}
+
+.nav-btn > div.nav-btn01 {
+  top: -100px;
+  left: 2.5px;
+}
+
+.nav-btn > div.nav-btn02 {
+  top: -100px;
+  left: 102.5px;
+}
+
+.nav-btn > div.nav-btn03 {
+  top: 0px;
+  left: 202.5px;
+}
+
+.nav-btn > div.nav-btn04 {
+  top: 100px;
+  left: 202.5px;
+}
+
+.nav-btn > div.nav-btn05 {
+  top: -100px;
+  left: 202.5px;
+}
+
+.nav-btn .rotation-box {
+  text-align: center;
+  height: 100%;
+  line-height: 97.5px;
+  transform: rotate(-45deg);
+}
+
+.nav-btn .rotation-box .fa {
+  font-size: 3rem;
+  color: #fff;
+}
+
+@keyframes bg-ani {
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+/*# sourceMappingURL=stylesheet.css.map */

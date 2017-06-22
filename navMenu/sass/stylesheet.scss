@@ -1,0 +1,117 @@
+html, body {
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+.nav-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+
+    &.active {
+        .btns {
+            transform: scale(0);
+            // opacity: 0;
+            &.nav-btn01 {
+                top: 0px;
+                // transform: translateY(0px);
+            }
+            &.nav-btn02 {
+                top: 0px;
+                // transform: translateY(0px);
+            }
+            &.nav-btn03 {
+                top: 100px;
+                left: 0px;
+                // transform: translate(0px, 0px);
+            }
+            &.nav-btn04 {
+                left: 0px;
+                // transform: translateX(0px);
+            }
+            &.nav-btn05 {
+                top: 0px;
+                left: 0px;
+                // transform: translate(0px, 0px);
+            }
+        }
+    }
+    .text {
+        z-index: 999;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 200px;
+        font-size: 5rem;
+        font-weight: bold;
+        cursor: pointer;
+        background: linear-gradient(90deg, #910EC9, #d350db, #910EC9);
+        background-size: 400% 400%;
+        animation: bg-ani 5s infinite;
+        span {
+            display: block;
+            transform: rotate(-45deg);
+        }
+        // transition: transform .8s ease-out;
+    }
+    > div {
+        position: absolute;
+        width: 97.5px;
+        height: 97.5px;
+        background: lightcoral;
+        transition: all 0.8s ease-out;
+
+        &.nav-btn01 {
+            top: -100px;
+            left: 2.5px;
+        }
+        &.nav-btn02 {
+            top: -100px;
+            left: 102.5px;
+        }
+        &.nav-btn03 {
+            top: 0px;
+            left: 202.5px;
+        }
+        &.nav-btn04 {
+            top: 100px;
+            left: 202.5px;
+        }
+        &.nav-btn05 {
+            top: -100px;
+            left: 202.5px;
+        }
+    }
+
+    .rotation-box {
+        text-align: center;
+        height: 100%;
+        line-height: 97.5px;
+        transform: rotate(-45deg);
+
+        .fa {
+            font-size: 3rem;
+            color: #fff;
+        }
+    }
+}
+
+
+@keyframes bg-ani {
+    50% {
+        background-position: 100% 0;
+    }
+}

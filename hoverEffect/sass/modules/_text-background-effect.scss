@@ -1,0 +1,55 @@
+.text-background-effect {
+    background: lightgoldenrodyellow;
+    position: relative;
+
+    a {
+        @include pos-centering;
+        text-transform: uppercase;
+        font-size: 8rem;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url("../images/1.jpg");
+        font-family: 'Kalam', cursive;
+        font-weight: bolder;
+        text-decoration: none;
+        
+        &:hover {
+            animation: text-background-effect-ani 2s infinite;
+        }
+    }
+}
+@keyframes text-background-effect-ani {
+    0% {
+        background-image: url("../images/1.jpg");
+    }
+    10% {
+        background-image: url("../images/9.jpg");
+    }
+    20% {
+        background-image: url("../images/2.jpg");
+    }
+    30% {
+        background-image: url("../images/3.jpg");
+    }
+    40% {
+        background-image: url("../images/4.jpg");
+    }
+    50% {
+        background-image: url("../images/5.jpg");
+    }
+    60% {
+        background-image: url("../images/6.jpg");
+    }
+    70% {
+        background-image: url("../images/7.jpg");
+    }
+    80% {
+        background-image: url("../images/8.jpg");
+    }
+    90% {
+        background-image: url("../images/9.jpg");
+    }
+    100% {
+        background-image: url("../images/10.jpg");
+    }
+}

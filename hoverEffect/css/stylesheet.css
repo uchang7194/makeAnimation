@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam:400,700");
+html, body {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.text-background-effect {
+  background: lightgoldenrodyellow;
+  position: relative;
+}
+
+.text-background-effect a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 8rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url("../images/1.jpg");
+  font-family: 'Kalam', cursive;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.text-background-effect a:hover {
+  animation: text-background-effect-ani 2s infinite;
+}
+
+@keyframes text-background-effect-ani {
+  0% {
+    background-image: url("../images/1.jpg");
+  }
+  10% {
+    background-image: url("../images/9.jpg");
+  }
+  20% {
+    background-image: url("../images/2.jpg");
+  }
+  30% {
+    background-image: url("../images/3.jpg");
+  }
+  40% {
+    background-image: url("../images/4.jpg");
+  }
+  50% {
+    background-image: url("../images/5.jpg");
+  }
+  60% {
+    background-image: url("../images/6.jpg");
+  }
+  70% {
+    background-image: url("../images/7.jpg");
+  }
+  80% {
+    background-image: url("../images/8.jpg");
+  }
+  90% {
+    background-image: url("../images/9.jpg");
+  }
+  100% {
+    background-image: url("../images/10.jpg");
+  }
+}
+
+.comming {
+  background: url("../images/5.jpg") no-repeat;
+  position: relative;
+}
+
+.comming a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-weight: bold;
+  transition: all 1.2s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #fff 0%, #fff 50%, transparent 50%, transparent 60%, #fff 60%, #fff 100%);
+  background-repeat: no-repeat;
+  background-size: 400%;
+  background-position: 0 0;
+}
+
+.comming a:hover {
+  background-position: 100% 0;
+}
+
+/*@import "modules/settings";
+@import "modules/grid";*/
+
+/*# sourceMappingURL=stylesheet.css.map */
