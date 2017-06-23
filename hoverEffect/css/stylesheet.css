@@ -11,6 +11,10 @@ body {
   font-size: 1.4rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 section {
   width: 100%;
   height: 100vh;
@@ -33,7 +37,6 @@ section {
   background-image: url("../images/1.jpg");
   font-family: 'Kalam', cursive;
   font-weight: bolder;
-  text-decoration: none;
 }
 
 .text-background-effect a:hover {
@@ -93,7 +96,7 @@ section {
   transition: all 1.2s;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: -webkit-linear-gradient(left, #fff 0%, #fff 50%, transparent 50%, transparent 60%, #fff 60%, #fff 100%);
+  background-image: -webkit-linear-gradient(left, #fff 0%, #fff 50%, transparent 50%, transparent 50%, #fff 60%, #fff 100%);
   background-repeat: no-repeat;
   background-size: 400%;
   background-position: 0 0;
@@ -101,6 +104,66 @@ section {
 
 .comming a:hover {
   background-position: 100% 0;
+}
+
+.divText {
+  background: lightpink;
+  position: relative;
+}
+
+.divText a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clear: both;
+}
+
+.divText a:hover div {
+  color: lightblue;
+}
+
+.divText a:hover span.visible-left {
+  top: -150px;
+  opacity: 0;
+}
+
+.divText a:hover span.visible-right {
+  top: 150px;
+  opacity: 0;
+}
+
+.divText div {
+  position: relative;
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: transparent;
+  float: left;
+  margin-right: 10px;
+  transition: all 0.8s;
+  line-height: 8rem;
+}
+
+.divText div span {
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  width: 50%;
+  color: lightblue;
+  transition: all 0.8s;
+  overflow: hidden;
+}
+
+.divText div span.visible-left {
+  left: -50%;
+  margin-left: 50%;
+}
+
+.divText div span.visible-right {
+  right: -50%;
+  margin-right: 50%;
+  text-indent: -50%;
 }
 
 /*@import "modules/settings";

@@ -1,0 +1,60 @@
+.divText {
+    $bg-color: lightpink;
+    background: $bg-color;
+    position: relative;
+    a {
+        @include pos-centering;
+        clear: both;
+        
+
+        &:hover div{
+            color: lightblue;
+        }
+
+        &:hover span.visible-left {
+            top: -150px;
+            opacity: 0;
+        }
+
+        &:hover span.visible-right {
+            top: 150px;
+            opacity: 0;
+        }    
+    }
+    div {
+        position: relative;
+        font-size: $default-font-size;        
+        font-weight: bold;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0);   
+        float: left;
+        margin-right: 10px; 
+        transition: all 0.8s;
+        line-height: $default-font-size;
+        span {
+            
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            width: 50%;
+            color: lightblue;
+            transition: all 0.8s;
+            overflow: hidden;
+            &.visible-left {
+                left: -50%;
+                margin-left: 50%;
+                // transform: translateX(50%);
+            }
+
+            &.visible-right {
+                right: -50%;
+                margin-right: 50%;
+                text-indent: -50%;
+                // transform: translateX(50%);
+                
+            }
+        }
+        
+    }
+    
+}
